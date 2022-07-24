@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" class="theme" id="html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cripto Tracker</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="shortcut icon" href="./public/img/favico.png" type="image/x-icon">
+</head>
+
+<body class="container" id="body">
+    <section class="navbar">
+        <article class="navbar__logo">
+            <img src="./public/img/logo.png" alt="">
+        </article>
+
+        <article class="navbar__now">
+            <div class="navbar__now--date" id="nowDate"></div>
+            <div class="navbar__now--time" id="nowTime"></div>
+        </article>
+
+        <article class="navbar__menu" id="navbarMenu">
+            <div class="navbar__menu--item" id="searchCoinButton">
+                <img src="./public/img/lupa.png" alt="">
+                <p id="searchCoinText">Info moneda</p>
+            </div>
+            <div class="navbar__menu--item" id="followedButton">
+                <img src="./public/img/radar1.png" alt="">
+                <p id="followedText">Ocultar Radar</p>
+            </div>
+            <div class="navbar__menu--item" id="loginButton">
+                <img src="./public/img/loginuser.png" alt="">
+                <p id="userInfo">Iniciar sesión</p>
+            </div>
+        </article>
+
+        <article class="navbar__mobile">
+            <div class="navbar__menu--item" id="mobileButtonContainer">
+                <img src="./public/img/menu.png" alt="">
+                <p id="mobileButton">Menu</p>
+            </div>
+        </article>
+    </section>
+    <!-- Barra de navegación -->
+
+    <section class="main__container">
+
+        <article class="upper__container">
+            <!-- Widget de monedas seguidas -->
+            <section class="followed" id="followed">
+                <article class="followed__cards--container" id="followedContainer"></article>
+                <article class="followed__add--container">
+                    <div class="followed__add--button" id="addFollowedButton">
+                        <p>+</p>
+                    </div>
+                </article>
+            </section>
+            <!-- Tabla principal con monedas -->
+            <section class="criptolist">
+                <article>
+                    <div class="active__table">
+
+                        <!-- HEADER DE TABLA -->
+                        <div class="table__header">
+                            <!-- PRIMERA FILA HEADER -->
+                            <div class="table__header--head">
+                                <p id="tableTitle">Operaciones abiertas</p>
+                            </div>
+
+                            <div class="table__header--average">
+                                <p id="percentageAverage"></p>
+                                <p id="profitAverage"></p>
+                            </div>
+
+                            <div class="table__header--add">
+                                <input type="text" class="navbar__search--input" placeholder="TOKEN" id="searchInput">
+                                <button class="navbar__search--button" id="searchButton">Buscar</button>
+                                <button class="navbar__search--button" id="resetButton">Resetear</button>
+                                <button class="navbar__add" id="addOperationButton">+</button>
+                            </div>
+
+                            <!-- SEGUNDA FILA HEADER -->
+                            <div class="table__header--tokenid">
+                                <p>TOKEN</p>
+                            </div>
+                            <div class="table__header--initialamount">
+                                <p>INVERSIÓN INICIAL</p>
+                            </div>
+                            <div class="table__header--entryprice">
+                                <p>PRECIO DE ENTRADA</p>
+                            </div>
+                            <div class="table__header--quantity">
+                                <p>CANTIDAD ADQUIRIDA</p>
+                            </div>
+                            <div class="table__header--currentprice">
+                                <p>PRECIO ACTUAL</p>
+                            </div>
+                            <div class="table__header--percentage" id="percentage">
+                                <p>PORCENTAJE REALIZADO</p>
+                            </div>
+                            <div class="table__header--profit" id="profit">
+                                <p>BENEFICIO REALIZADO</p>
+                            </div>
+                            <div class="table__header--remove">
+                                <p>-</p>
+                            </div>
+                        </div>
+
+                        <!-- FILAS DE TABLA -->
+                        <div class="table__rows" id="table__rows"></div>
+
+                        <!-- FOOTER DE TABLA -->
+                        <div class="table__footer">
+                            <p id="tableFooter"></p>
+                            <p id="tableMax"></p>
+                        </div>
+
+                    </div>
+                </article>
+            </section>
+        </article>
+
+        <article class="lower__container">
+            <p>Cripto Tracker v1.0 © | Desarrollada por Martín Guevara</p>
+        </article>
+    </section>
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/luxon@3.0.1/build/global/luxon.min.js"></script>
+<script src="./public/js/structures.js" async></script>
+<script src="./public/js/script.js" async></script>
+
+</html>
